@@ -1,7 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import trainer from "./slices/trainer.slices";
 
-configureStore({
+export default configureStore({
     reducer: {
         trainer
     }

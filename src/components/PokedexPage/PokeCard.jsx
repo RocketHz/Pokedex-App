@@ -1,17 +1,24 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import useFetch from '../../hooks/useFetch'
+import { useNavigate } from 'react-router-dom'
 
 const PokeCard = ({ url }) => {
 
   const [ pokemon, getPokemon] = useFetch(url)
 
+  const navigate = useNavigate()
+
   useEffect(() => {
     getPokemon()
   }, [])
 
+  const handleNavigate = () => { 
+    navigate(`/pokedex/:${pokemon.id}`)
+   }
+
 
   return (
-    <article>
+    <article onClick={handleNavigate}>
       <header>
         <img src={pokemon?.sprites.other['official-artwork'].front_default} alt="" />
       </header>
