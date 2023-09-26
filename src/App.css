@@ -1,0 +1,320 @@
+body {
+  background: rgb(6, 11, 40);
+  color: rgb(255, 255, 255);
+  font-family: Montserrat, sans-serif;
+}
+
+button {
+  font-family: Montserrat, sans-serif;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.main_container {
+  max-width: 78rem;
+  padding: 0px 1rem;
+  margin: 0px auto;
+}
+.main_content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  gap: 2.5em;
+}
+
+.text_content{
+  font-size: 1.5rem;
+  line-height: 135%;
+  font-weight: 700;
+}
+
+.form_container{
+  height: 3.5rem;
+  display: flex;
+  border-radius: 0.5rem;
+  transition: all 0.4s ease 0s;
+}
+.form_container:hover {
+  box-shadow: rgba(47, 90, 255, 0.4) 0px 0px 0px 4px;
+}
+
+.input_content{
+  flex: 1 1 0%;
+  background: none;
+  border: 0.13rem solid rgb(47, 90, 255);
+  border-radius: 0.5rem 0px 0px 0.5rem;
+  padding: 1rem;
+  font-family: Montserrat;
+  font-size: 1rem;
+  line-height: 150%;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  outline: none;
+}
+
+.btn_form{
+  width: 3.5rem;
+  height: 3.5rem;
+  background: rgb(47, 90, 255);
+  border-radius: 0px 0.5rem 0.5rem 0px;
+}
+
+.btn_form svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.poke_header{
+  display: flex;
+  align-items: center;
+  gap: 1.5rem rem 2rem;
+  margin: 4.5rem 0px;
+  border-bottom: 1px solid rgb(36, 41, 63);
+  padding-bottom: 2.19rem;
+  justify-content: space-evenly;
+}
+
+.select_container{
+  display: flex;
+  justify-content: flex-end; 
+  align-items: center;
+}
+
+.select_content{
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3.5rem;
+  border: 0.13rem solid rgb(47, 90, 255);
+  border-radius: 0.5rem;
+  transition: all 0.4s ease 0s;
+  color: #0076FF;
+}
+.select_content:hover {
+  box-shadow: rgba(47, 90, 255, 0.4) 0px 0px 0px 4px;
+}
+
+.select_items{
+  display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.5rem;
+    flex-shrink: 0;
+    font-family: Montserrat;
+    font-size: 1rem;
+    line-height: 150%;
+    font-weight: 400;
+    text-transform: capitalize;
+    color: rgb(0, 0, 0);
+}
+
+.poke_content{
+  margin: 12.75rem auto 2.5rem;
+  display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12.5rem 2rem;
+}
+
+.poke_card{
+  width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(6, 11, 40, 0.15);
+    border-top: 1px solid rgb(36, 41, 63);
+    border-right: 1px solid rgb(36, 41, 63);
+    border-left: 1px solid rgb(36, 41, 63);
+    border-image: initial;
+    border-bottom: none;
+    border-radius: 1.5rem;
+    position: relative;
+    animation: 0.8s ease 0s 1 normal none running isvQfc;
+}
+
+.poke_card img {
+  min-width: 16rem;
+  min-height: 16rem;
+  grid-area: 1 / 1 / auto / auto;
+  opacity: 1;
+  transition: all 0.2s ease 0s;
+}
+
+.poke_card_background{
+  width: 100%;
+  height: 100%;
+  border-radius: 1.5rem;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  z-index: -1;
+  backface-visibility: hidden;
+  transform: translate3d(0px, 0px, 0px);
+}
+.poke_card_background::after {
+  content: "";
+  display: block;
+  width: 12.5rem;
+  height: 12.5rem;
+  background: rgb(28, 216, 14);
+  filter: blur(128px);
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.8s ease 0s;
+}
+
+.poke_name{
+  font-size: 2rem;
+  line-height: 135%;
+  font-weight: 700;
+  text-transform: capitalize;
+  text-align: center;
+  display: block;
+  margin: 0.25rem 0.5rem 0.75rem;
+}
+
+.poke_type{
+  display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.poke_type *{
+  background: rgb(28, 216, 14);
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+  font-family: Montserrat;
+  font-size: 1rem;
+  line-height: 150%;
+  font-weight: 400;
+  text-transform: capitalize;
+  color: rgb(255, 255, 255);
+}
+
+.poke_stats_container{
+  display: flex;
+  gap: 1.5rem;
+  margin: 1.5rem 0px 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.poke_stats_content{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.poke_stats_name{
+  font-size: 1rem;
+  line-height: 150%;
+  font-weight: 400;
+}
+
+.poke_stats_base{
+  font-weight: 700;
+}
+
+.poke_details{
+  width: calc(100% + 2px);
+    height: 3rem;
+    background: rgb(28, 216, 14);
+    border-radius: 0px 0px 1.5rem 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    line-height: 150%;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+}
+
+.poke_details svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+
+
+
+/* 
+  Aqui iran los colores de los tipos de pokemon
+ */
+
+ .normal{
+  background: #9FA39D;
+ }
+ .fighting{
+  background: #ff215b;
+ }
+ .flying{
+  background: #89BDFF;
+ }
+ .poison{
+  background: #46054b;
+ }
+ .ground{
+  background: #FF6B0D;
+ }
+ .rock{
+  background: #D8BC5A;
+ }
+ .bug{
+  background: #7BCF00;
+ }
+ .ghost{
+  background: #4E6AFF;
+ }
+ .steel{
+  background: #23A1BD;
+ }
+ .fire{
+  background: #FF9900;
+ }
+ .water{
+  background: #14A8FF;
+ }
+ .grass{
+  background: #1CD80E;
+ }
+ .electric{
+  background: #FFDE00;
+ }
+ .psychic{
+  background: #FF6C64;
+ }
+ .ice{
+  background: #2EE4C6;
+ }
+ .dragon{
+  background: #0076FF;
+ }
+ .dark{
+  background: #5A566A;
+ }
+ .fairy{
+  background: #FF76FF;
+ }
+
+ /* ---------------------------------------- */

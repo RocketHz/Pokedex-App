@@ -8,7 +8,7 @@ import ProtectedRoutes from './pages/ProtectedRoutes'
 
 const App = () => {
   return (
-    <div>
+    <div className='main_container'>
       <Routes>
         <Route path='/' element={<HomePage />}/>
         <Route element={<ProtectedRoutes />}>

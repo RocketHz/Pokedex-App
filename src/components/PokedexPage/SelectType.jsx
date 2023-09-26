@@ -5,7 +5,7 @@ const SelectType = ({ setTypeSelected }) => {
 
   const url = `https://pokeapi.co/api/v2/type`
 
-  const [ types, getTypes ] = useFetch(url)
+  const [types, getTypes] = useFetch(url)
 
   useEffect(() => {
     getTypes()
@@ -14,16 +14,32 @@ const SelectType = ({ setTypeSelected }) => {
   const handleChange = (e) => {
     setTypeSelected(e.target.value)
   }
-  
+
+  // const typeColors = {
+  //   fuego: 'red',
+  //   agua: 'blue',
+  //   // Agrega más tipos de Pokémon y colores según tus necesidades
+  // };
+
+
 
   return (
-    <div>
-      <select name="" id="" onChange={handleChange}>
-        <option value="allPokemos">All Pokemons</option>
+    <div className='select_container'>
+      <select className='select_content' name="" id="" onChange={handleChange}>
+        <option className='select_items' value="allPokemos">All Pokemons</option>
         {
-          types?.results.map(typeInfo => (
-            <option key={typeInfo.url} value={typeInfo.url}>{typeInfo.name}</option>
-          ))
+          types?.results.map(typeInfo => {
+            const typeColor = typeInfo.name.toLowerCase();
+            return (
+              <option
+                className={`select_items ${typeColor}`}
+                key={typeInfo.url}
+                value={typeInfo.url}
+              >
+                {typeInfo.name}
+              </option>
+            );
+          })
         }
       </select>
     </div>
