@@ -198,7 +198,6 @@ ul {
     flex-wrap: wrap;
 }
 .poke_type *{
-  background: rgb(28, 216, 14);
   display: flex;
   align-items: center;
   gap: 0.5rem;
