@@ -12,7 +12,7 @@ const PokedexPage = () => {
 
   const inputSearch = useRef();
 
-  const url = "https://pokeapi.co/api/v2/pokemon?offset=0&limit=20";
+  const url = "https://pokeapi.co/api/v2/pokemon?offset=0&limit=999";
   const [pokemons, getPokemons, getTypePokemon] = useFetch(url);
 
   useEffect(() => {
