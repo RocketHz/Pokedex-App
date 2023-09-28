@@ -15,12 +15,6 @@ const SelectType = ({ setTypeSelected }) => {
     setTypeSelected(e.target.value)
   }
 
-  // const typeColors = {
-  //   fuego: 'red',
-  //   agua: 'blue',
-  //   // Agrega más tipos de Pokémon y colores según tus necesidades
-  // };
-
 
 
   return (

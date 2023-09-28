@@ -19,8 +19,9 @@ const HomePage = () => {
 
   return (
     <div className='main_content' >
+        <img width="100" height="100" src="https://img.icons8.com/matisse/100/star-pokemon.png" alt="star-pokemon"/>
         <h1>Pokedex</h1>
-        <h2>Hi Trainer!</h2>
+        <h2 className='hi_trainer' >Hi Trainer!</h2>
         <p className='text_content'>To start, please, enter your trainer name</p>
         <form className='form_container' onSubmit={handleTrainer}>
             <input className='input_content' ref={inputTrainer} type="text" />
