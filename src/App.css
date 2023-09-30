@@ -169,7 +169,6 @@ ul {
     border-bottom: none;
     border-radius: 1.5rem;
     position: relative;
-    animation: 0.8s ease 0s 1 normal none running isvQfc;
 }
 
 .poke_card img {
@@ -284,8 +283,18 @@ ul {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  flex-direction: column;
   gap: 2em;
+}
+
+.pokeID_header img{
+  max-width: 200px;
+}
+
+.pokeID_header_content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .pokeID_color{
@@ -337,6 +346,7 @@ ul {
   flex-direction: column;
   -webkit-box-align: center;
   align-items: center;
+  gap: 1em;
 }
 
 .pokeID_height, .pokeID_weight {
@@ -344,6 +354,7 @@ ul {
     -webkit-box-align: center;
     align-items: center;
     gap: 0.5rem;
+    flex-direction: column;
 }
 .pokeID_height svg, .pokeID_weight svg {
   width: 1.5rem;
@@ -352,11 +363,21 @@ ul {
 .pokeID_height span, .pokeID_weight span {
   font-weight: 700;
 }
+
+.pokeID_content_type,
+.pokeID_content_ability{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+}
+
 .pokeID_type{
   display: flex;
     gap: 0.5rem;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .pokeID_type *{
@@ -376,15 +397,11 @@ ul {
 }
 
 .pokeID_stats{
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.pokeID_stats li {
   display: flex;
-  -webkit-box-align: center;
-  align-items: center;
+  flex-direction: column;
+  padding: 6px;
+  width: 30vw;
+  gap: 1em;
 }
 
 .pokeID_stats span {
@@ -407,7 +424,7 @@ ul {
 
 .pokeID_stats_bar {
   width: 100%;
-  height: 0.5rem;
+  height: 1.5rem;
   border-radius: 0.25rem;
   background: rgb(85, 85, 85);
   overflow: hidden;
@@ -416,13 +433,29 @@ ul {
 }
 
 .pokeID_stats_bar_color {
-  width: 45%;
-  background: rgb(255, 54, 78);
+  transform: scaleX(var(--size-value));
+  width: var(--size-value);
+
+  background-size: 100% 100%;
   box-shadow: rgba(255, 54, 78, 0.25) 0px 0px 0.75rem 0.25rem;
-  height: 0.5rem;
+  height: 1.5rem;
   border-radius: 0.25rem;
-  transform: translate3d(-100%, 0px, 0px);
-  animation: 2s ease 0s 1 normal forwards running bYYCGR;
+  background-position: var(--color-value) 0;
+}
+
+
+.pokeID_stats_bar_color.fillbar {
+  background-position: var(--color-value) 0;
+}
+
+
+@keyframes fillBar {
+  from {
+    width: 50;
+  }
+  to {
+    width: calc(var(--stat-value) * 100%);
+  }
 }
 
 .pokeID_movement{
